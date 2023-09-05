@@ -1,0 +1,12 @@
+.navbar {
+  background-color: transparent;
+  min-height: 100px;
+  }
+
+.scrolled-navbar {
+    transition: 0.3s ease-in-out; 
+  }
+
+.offcanvasitem{
+  padding: 50px;
+}
