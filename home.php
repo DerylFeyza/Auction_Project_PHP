@@ -13,7 +13,7 @@
     <div class="bg">
         <div class="landingtext">
         <h1>
-            SLAVERY IS GREAT
+            SLAVERY IS BUSSIN
         </h1>
         <p>
             buy high quality negroes at affordable price!!
