@@ -16,7 +16,7 @@
             SLAVERY IS BUSSIN
         </h1>
         <p>
-            buy high quality negroes at affordable price!!
+            buy high quality negroes at affordable price
         </p>
     </div>
 
