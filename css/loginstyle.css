@@ -63,17 +63,6 @@ form {
 	text-align: center;
 }
 
-.signup{
-	background-color: #FFFFFF;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	padding: 0 50px;
-	height: 100%;
-	text-align: center;
-} 
-
 input {
 	background-color: #eee;
 	border: none;
@@ -93,6 +82,17 @@ input {
 	min-height: 480px;
 }
 
+.sign-up-container {
+	background-color: #fff;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 384px;
+	max-width: 100%;
+	min-height: 480px;
+}
+
 .form-container {
 	position: absolute;
 	top: 0;
@@ -105,7 +105,7 @@ input {
 	z-index: 2;
 }
 
-.sign-up-container {
+.signup-container {
 	left: 0;
 	width: 100%;
 	z-index: 2;
