@@ -14,17 +14,17 @@
 <body>
 <div class="login-container" id="login-container">
     <div class="form-container log-in-container">
-    <form action="#">
+    <form action="proses_login.php" method="post">
         <h1>Login</h1>
         <div class="social-container">
         <a href="#" class="social"><i class="fa fa-facebook fa-2x"></i></a>
         <a href="#" class="social"><i class="fab fa fa-twitter fa-2x"></i></a>
         </div>
         <span>or use your account</span>
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Password" />
+        <input type="text" name="username" value="" class="form-control"/>
+        <input type="password" name="password" class="form-control"/>
         <a href="#">Forgot your password?</a>
-        <button id="Login">Log In</button>
+        <button  type="submit" id="Login">Log In</button>
     </form>
     </div>
     <div class="overlay-container">
