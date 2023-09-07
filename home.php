@@ -13,10 +13,10 @@
     <div class="bg">
         <div class="landingtext">
         <h1>
-            SLAVERY IS BUSSIN
+            yo mama
         </h1>
         <p>
-            buy high quality negroes and children at affordable price
+            wowzers
         </p>
     </div>
 
