@@ -1,24 +1,21 @@
-<?php 
-    if($_POST){
-        $username=$_POST['username'];
-        $password=$_POST['password'];
-        if(empty($username)){
-            echo "<script>alert('Username tidak boleh kosong');location.href='login.php';</script>";
-        } elseif(empty($password)){
-            echo "<script>alert('Password tidak boleh kosong');location.href='login.php';</script>";
+<?php
+if($_POST){
+    $username=$_POST['username'];
+    $password= $_POST['password'];
+
+    if(empty($username)){
+        echo "<script>alert('username tidak boleh kosong');location.href='tambah_siswa.php';</script>";
+    } elseif(empty($password)){
+        echo "<script>alert('password tidak boleh kosong');location.href='tambah_siswa.php';</script>";
+    } else {
+        include "koneksi.php";
+        $insert=mysqli_query($conn,"insert into siswa (nama_siswa,tanggal_lahir, gender, alamat, username, password, id_kelas) 
+        value ('".$username."','".md5($password)."')") or die(mysqli_error($conn));
+        if($insert){
+            echo "<script>alert('Sukses menambahkan akun');location.href='tambah_siswa.php';</script>";
         } else {
-            include "koneksi.php";
-            $qry_login=mysqli_query($conn,"select * from client where username = '".$username."' and password = '".md5($password)."'");
-            if(mysqli_num_rows($qry_login)>0){
-                $dt_login=mysqli_fetch_array($qry_login);
-                session_start();
-                $_SESSION['id']=$dt_login['id'];
-                $_SESSION['username']=$dt_login['username'];
-                $_SESSION['status_login']=true;
-                header("location: home.php");
-            } else {
-                echo "<script>alert('Username dan Password tidak benar');location.href='login.php';</script>";
-            }
+            echo "<script>alert('Gagal menambahkan akun');location.href='tambah_siswa.php';</script>";
         }
     }
+}
 ?>
