@@ -15,7 +15,7 @@
 <div class="login-container" id="login-container">
     <div class="form-container log-in-container">
     <form class="signup" action="proses_signup.php" method="post">
-        <h1>Sign Up</h1>
+        <h1>Sign up</h1>
         <div class="social-container">
         <a href="#" class="social"><i class="fa fa-facebook fa-2x"></i></a>
         <a href="#" class="social"><i class="fab fa fa-twitter fa-2x"></i></a>
