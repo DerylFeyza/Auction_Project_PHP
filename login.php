@@ -23,7 +23,7 @@
         <span>or use your account</span>
         <input type="text" name="username" value="" class="form-control"/>
         <input type="password" name="password" class="form-control"/>
-        <a href="#">Forgot your password?</a>
+        <a href="signup.php">Or Sign Up Here</a>
         <button  type="submit" id="Login">Log In</button>
     </form>
     </div>
