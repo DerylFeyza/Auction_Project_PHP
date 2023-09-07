@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="login-container" id="login-container">
-    <div class="form-container log-in-container">
+    <div class="form-container sign-up-container">
     <form class="signup" action="proses_signup.php" method="post">
         <h1>Sign up</h1>
         <div class="social-container">
