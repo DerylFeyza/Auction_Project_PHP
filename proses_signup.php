@@ -9,8 +9,8 @@ if($_POST){
         echo "<script>alert('password tidak boleh kosong');location.href='signup.php';</script>";
     } else {
         include "koneksi.php";
-        $insert=mysqli_query($conn,"insert into siswa (nama_siswa,tanggal_lahir, gender, alamat, username, password, id_kelas) 
-        value ('".$username."','".md5($password)."')") or die(mysqli_error($conn));
+        $insert=mysqli_query($conn,"insert into client (username, password, role) 
+        value ('".$username."','".md5($password)."','user')") or die(mysqli_error($conn));
         if($insert){
             echo "<script>alert('Sukses menambahkan akun');location.href='signup.php';</script>";
         } else {
