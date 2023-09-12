@@ -39,6 +39,7 @@
               <img src="/Project_PHP/itemasset/<?=$dt_item['cover']?>" class="card-img-top">
               <div class="card-body">
                 <h5 class="card-title"><?=$dt_item['name']?></h5>
+                <h4 class="card-title"><?=$dt_item['startprice']?></h4>
                 <p class="card-text"><?=substr($dt_item['deskripsi'], 0,20)?></p>
               </div>
             </div>
