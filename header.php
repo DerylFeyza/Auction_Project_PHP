@@ -64,10 +64,10 @@ session_start();
   </div>
   <div class="offcanvas-body">
     <div>
-      Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+     
     </div>
     <ul>
-    <li><a class="dropdown-item" id="offcanvasitem" href="#">Action</a></li>
+    <li><a class="dropdown-item" id="offcanvasitem" href="tambah_item.php">bkp</a></li>
     <li><a class="dropdown-item" id="offcanvasitem" href="#">Another action</a></li>
     <li><a class="dropdown-item" id="offcanvasitem" href="#">Something else here</a></li>
     </ul>
