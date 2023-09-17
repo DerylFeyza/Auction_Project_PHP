@@ -1,8 +1,5 @@
 <?php 
-session_start();
-    if($_SESSION['status_login']!=true){
-        header('location: login.php');
-    }
+session_start()
 ?>
   
 <!DOCTYPE html>
@@ -43,7 +40,7 @@ session_start();
               <a class="nav-link" href="#">Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link" href="logout.php">logoutidk</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="login.php">Contact</a>
@@ -68,7 +65,7 @@ session_start();
     </div>
     <ul>
     <li><a class="dropdown-item" id="offcanvasitem" href="tambah_item.php">bkp</a></li>
-    <li><a class="dropdown-item" id="offcanvasitem" href="#">Another action</a></li>
+    <li><a class="dropdown-item" id="offcanvasitem" href="item_manager.php">Manage Auction</a></li>
     <li><a class="dropdown-item" id="offcanvasitem" href="#">Something else here</a></li>
     </ul>
     </div>
