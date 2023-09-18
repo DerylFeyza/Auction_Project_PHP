@@ -1,0 +1,1 @@
+gatau gw ngapain ryl
