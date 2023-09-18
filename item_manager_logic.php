@@ -12,6 +12,14 @@ elseif(isset($_POST['approved_button'])){
     $statusFilter = 'approved';
     displayItems($statusFilter);
 }
+elseif(isset($_POST['cancelled_button'])){
+    $statusFilter = 'Cancelled';
+    displayItems($statusFilter);
+}
+elseif(isset($_POST['sold_button'])){
+    $statusFilter = 'Sold';
+    displayItems($statusFilter);
+}
 
 function displayItems($statusFilter) {
     include "koneksi.php";
