@@ -41,7 +41,7 @@
                 <h5 class="card-title"><?=$dt_item['name']?></h5>
                 <h4 class="card-title"><?=$dt_item['startprice']?></h4>
                 <p class="card-text"><?=substr($dt_item['deskripsi'], 0,20)?></p>
-                <button class="button">Undo Bid</button>
+                <a href="bidding.php?id=<?=$dt_item['id']?>" class="btn">Bid her</a>
               </div>
             </div>
         </div>

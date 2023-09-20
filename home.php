@@ -15,11 +15,12 @@
         <div class="landingtext">
         <?php
     if(isset($_SESSION['status_login'])){
-    if ( $_SESSION['status_login'] == true) {
-        // This HTML block will be generated if the condition is true
-        echo '<h2>welcome ' . $_SESSION['username'] . ' GO BUY SOME SLAVE.</h2>';
-    } 
+        if ( $_SESSION['status_login'] == true) {
+            // This HTML block will be generated if the condition is true
+            echo '<h2>welcome ' . $_SESSION['username'] . ' GO BUY SOME SLAVE.</h2>';
+        } 
     }
+
     else if(!isset($_SESSION['status_login'])){
         // This HTML block will be generated if the condition is false
         echo '<h1> yo mama </h1>';
