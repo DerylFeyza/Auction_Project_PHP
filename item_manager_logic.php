@@ -38,6 +38,7 @@ function displayItems($statusFilter) {
                         <h4 class="card-title"><?= $dt_item['startprice'] ?></h4>
                         <p class="card-text"><?= substr($dt_item['deskripsi'], 0, 20) ?></p>
                         <a href="item_hapus.php?id=<?=$dt_item['id']?>" onclick="return confirm('Apakah anda yakin menghapus data ini?')" class="btn btn-danger">Hapus</a></td>
+                        <a href="item_status.php?id=<?=$dt_item['id']?>" onclick="return confirm('Apakah anda yakin menghapus data ini?')" class="btn btn-danger">Approve</a></td>
                     </div>
                 </div>
             </div>
