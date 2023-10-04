@@ -20,7 +20,7 @@
         <a href="#" class="social"><i class="fab fa fa-twitter fa-2x"></i></a>
         </div>
         <span>or use your account</span>
-        <input type="text" name="username" value="" class="form-control"/>
+        <input  autocomplete="off" type="text" name="username" value="" class="form-control"/>
         <input type="password" name="password" id="password" class="form-control" />
         <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()"> Show Password
         <a href="signup.php">Or Sign Up Here</a>

@@ -19,7 +19,7 @@
         <a href="#" class="social"><i class="fa fa-facebook fa-2x"></i></a>
         <a href="#" class="social"><i class="fab fa fa-twitter fa-2x"></i></a>
         </div>
-        <input type="text" name="username" value="" class="form-control"/>
+        <input autocomplete="off" type="text" name="username" value="" class="form-control"/>
         <input type="password" name="password" class="form-control"/>
         <a href="login.php">Back to login page</a>
         <button  type="submit" id="Login">Sign Up</button>
