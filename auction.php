@@ -19,16 +19,19 @@
         border: 1px solid black;
     }
     img{
+        
         width: 100px;
         height: 250px;
         object-fit: cover;
+        background-position: top center;
     }
     .smh{
         margin-bottom: 20px;
     }
 </style>
 
-<div class="row">
+<div class="container">
+    <div class="row">
     <?php 
     include "koneksi.php";
     $qry_item=mysqli_query($conn,"select * from item");
@@ -48,6 +51,7 @@
         <?php
     }
     ?>
+    </div>
 </div>
 </body>
 </html>

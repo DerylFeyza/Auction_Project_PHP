@@ -21,10 +21,12 @@ elseif(isset($_POST['sold_button'])){
     displayItems($statusFilter);
 }
 
-function displayItems($statusFilter) {
+function displayItems($statusFilter) { ?>
+    <div class="row">
+    <?php
     include "koneksi.php";
     $statusFilter = mysqli_real_escape_string($conn, $statusFilter); 
-    $qry_item = mysqli_query($conn, "SELECT * FROM item WHERE status LIKE '$statusFilter'");
+    $qry_item = mysqli_query($conn, "SELECT * FROM item WHERE status LIKE '$statusFilter'");  
     while ($dt_item = mysqli_fetch_array($qry_item)) {
         ?>
         <div class="card mb-3" style="max-width: 500px;">
@@ -38,7 +40,7 @@ function displayItems($statusFilter) {
                         <h4 class="card-title"><?= $dt_item['startprice'] ?></h4>
                         <p class="card-text"><?= substr($dt_item['deskripsi'], 0, 20) ?></p>
                         <a href="item_hapus.php?id=<?=$dt_item['id']?>" onclick="return confirm('Apakah anda yakin menghapus data ini?')" class="btn btn-danger">Hapus</a></td>
-                        <a href="item_status.php?id=<?=$dt_item['id']?>" onclick="return confirm('Apakah anda yakin menghapus data ini?')" class="btn btn-danger">Approve</a></td>
+                        <a href="item_status.php?id=<?=$dt_item['id']?>" onclick="return confirm('Apakah anda yakin untuk approve item ini?')" class="btn btn-primary">Approve</a></td>
                     </div>
                 </div>
             </div>
@@ -47,3 +49,4 @@ function displayItems($statusFilter) {
     }
 }
 ?>
+</div>

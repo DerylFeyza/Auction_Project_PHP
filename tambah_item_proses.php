@@ -1,4 +1,5 @@
-<?php
+<!-- <?php
+//FILE IS NOT USED
 session_start();
 if (isset($_SESSION['id'])) {
     $id_publisher = $_SESSION['id'];
@@ -64,4 +65,4 @@ if($_POST){
     }
     }
 
-?>
+?> -->

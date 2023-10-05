@@ -39,23 +39,29 @@
     </div>
 </div>
 </form>
-<table class="table table-hover table-striped">
+<div class="container">
+<table class="table table-dark table-striped">
     <thead>
-        <th>NO</th><th>User</th><th>noaw</th><th>Bid</th>
+        <th>NO</th><th>User</th><th>username</th><th>Bid</th>
     </thead>
-
-    <tbody>
 <?php 
 include "koneksi.php";
         $qry_bids=mysqli_query($conn,"select * from bids WHERE id_item = '$item_id' order by bid desc");
         $no=0;
         while($dt_bids=mysqli_fetch_array($qry_bids)){
             $no++;
+            $id_user = $dt_bids['id_user'];
+            $qry_user = mysqli_query($conn, "SELECT username FROM client WHERE id = '$id_user'");
+            $nama_user = mysqli_fetch_array($qry_user)
             ?>
             <tr>
-                <td><?=$no?></td><td><?=$dt_bids['id_user']?></td><td><?=$dt_bids['id_item']?></td><td><?=$dt_bids['bid']?></td>
+                <td><?=$no?></td>
+                <td><?=$dt_bids['id_user']?></td>
+                <td><?=$nama_user['username']?></td>
+                <td><?=$dt_bids['bid']?></td>
             </tr>
         
     <?php 
         }
         ?>
+</div>
