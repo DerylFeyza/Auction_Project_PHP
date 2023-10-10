@@ -39,6 +39,7 @@
     </div>
     </div>
 </div>
+</div>
 <script>
         function togglePasswordVisibility() {
             var passwordField = document.getElementById("password");

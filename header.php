@@ -37,9 +37,6 @@ session_start()
               <a class="nav-link" href="auction.php">Auction</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Blog</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="logout.php">logoutidk</a>
             </li>
             <li class="nav-item">
@@ -66,7 +63,7 @@ session_start()
     <ul>
     <li><a class="dropdown-item" id="offcanvasitem" href="tambah_item.php">bkp</a></li>
     <li><a class="dropdown-item" id="offcanvasitem" href="item_manager.php">Manage Auction</a></li>
-    <li><a class="dropdown-item" id="offcanvasitem" href="#">Something else here</a></li>
+    <li><a class="dropdown-item" id="offcanvasitem" href="publisher_item.php">ur items</a></li>
     </ul>
     </div>
   </div>
@@ -79,7 +76,7 @@ session_start()
 
       window.addEventListener('scroll', function () {
         if (window.pageYOffset > 0) {
-            nav.style.backgroundColor = 'rgb(194, 31, 131)';
+            nav.style.backgroundColor = '#3f63c3';
             nav.classList.add('shadow'); 
         } else {
             nav.style.backgroundColor = ''; 

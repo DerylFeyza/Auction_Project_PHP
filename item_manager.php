@@ -4,7 +4,6 @@ include"header.php";
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 <link rel="stylesheet" href="css/manage.css">
 
     <meta charset="UTF-8">
@@ -12,6 +11,7 @@ include"header.php";
     <title>Document</title>
 </head>
 <body>
+    <div class="container">
 <form method="post" action="">
         <button type="submit" name="auctioned_button">Show Auctioned Items</button>
         <button type="submit" name="pending_button">Show Pending Items</button>
@@ -20,6 +20,7 @@ include"header.php";
         <button type="submit" name="cancelled_button">Show cancelled Items</button>
         <?php include "item_manager_logic.php"; ?>
     </form>
+    </div>
 </body>
 </html>
 

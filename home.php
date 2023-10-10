@@ -24,8 +24,8 @@
     else if(!isset($_SESSION['status_login'])){
         // This HTML block will be generated if the condition is false
         echo '<h1> yo mama </h1>';
-        echo '<h1> go login nigga</h1>';
-        echo '<a href=login.php login>';
+        echo '<h1> go login nega</h1>';
+        echo '<a href=login.php class="btn btn-primary">Login</a>';
         
     }
         ?>
