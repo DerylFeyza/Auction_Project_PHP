@@ -19,15 +19,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 </head>
-<div class="container">
+<div class="container bid-container">
     <div class="card-wrapper">
         <form action="bidding_process.php" method="post">
         <div class="row">
             <div class="image-container">
                 <img src="/Project_PHP/itemasset/<?= $dt_item['cover'] ?>" method="post">
             </div>
-            <div class="col-md-8">
-                <table class="tabel">
+            <div class="item-info">
                     <thead>
                         <tr>                           
                             <td><h1><?= $dt_item['name'] ?></h1></td>                     
@@ -35,18 +34,19 @@
                         <tr>
                             <td><p></p><?= $dt_item['deskripsi'] ?></p></td>
                         </tr>
-                        <tr class="input-bid">
-                            <td><input type="number" name="bid" value="" class="form-control"></td><td colspan="2"><input type="submit" name="simpan" value="Tambah Buku" class="btn btn-primary"></td>
-                        </tr>
+                        <tr class="input-bid"><td><input type="number" name="bid" value="" class="form-control"></td></tr>
+
+                        <tr><td><input type="submit" name="simpan" value="Tambah Buku" class="btn btn-primary"></td></tr>    
                     </thead>
-                </table>
             </div>
         </div>
-        <div class="bids">
         </form>
-        <table class="table table-dark table-striped">
+        </div>
+
+        <div class="table-container">
+        <table class="table table-striped table-seg">
             <thead>
-                <th>NO</th><th>User</th><th>username</th><th>Bid</th>
+                <th>NO</th><th>username</th><th>Bid</th>
             </thead>
         <?php 
         include "koneksi.php";
@@ -60,7 +60,6 @@
                     ?>
                     <tr>
                         <td><?=$no?></td>
-                        <td><?=$dt_bids['id_user']?></td>
                         <td><?=$nama_user['username']?></td>
                         <td><?=$dt_bids['bid']?></td>
                     </tr>
@@ -68,6 +67,6 @@
             <?php 
                 }
                 ?>
+        </table>
         </div>
     </div>
-</div>

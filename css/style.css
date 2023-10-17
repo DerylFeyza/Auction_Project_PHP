@@ -11,3 +11,16 @@
   padding: 50px;
 }
 
+.offcanvas{
+  background-color: blueviolet;
+}
+
+.bkp{
+  color: brown;
+  
+}
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+}
+

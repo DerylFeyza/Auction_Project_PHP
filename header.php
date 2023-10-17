@@ -13,43 +13,55 @@ session_start()
     <title>Documenta</title>
 </head>
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3 scrolled-navbar">
-      <div class="container">
-        <a class="navbar-brand" href="#">Negawatt</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="home.php">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="auction.php">Auction</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="logout.php">logoutidk</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="login.php">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a  class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-              Button
-            </a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3 scrolled-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="#">Negawatt</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-lg-0" style="display: flex;">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="home.php">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="auction.php">Auction</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="logout.php">logoutidk</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.php">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Button</a>
+        </li>
+        </ul>
+        <span class="navbar-text">
+        <?php 
+            if(isset($_SESSION['status_login'])){
+              if ($_SESSION['status_login'] == true) {
+                  echo '<h2>' . $_SESSION['username'] . '</h2>';
+              } 
+            }
+            else if(!isset($_SESSION['status_login'])){
+                echo '<h4 class="bkp">Guest</h4>';                 
+            }
+          ?>
+        </span>
+    </div>
+  </div>
+</nav>
+
 
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
   <div class="offcanvas-header">
