@@ -2,10 +2,6 @@
 include "header.php";
 include "koneksi.php";
 ?>
-
-<head>
-    <link rel="stylesheet" href="css/manage.css">
-</head>
 <table class="table table-striped usermanager">
     <thead>
         <tr>

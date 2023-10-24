@@ -13,7 +13,7 @@ body {
 .bg {
   height: 100%;
   background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%),
-    url("/Project_PHP/Bgs/menggoda.jpg");
+    url("../Bgs/market.jpg");
   background-position: top center; /* Set the background position to top center */
   background-size: cover;
   background-repeat: no-repeat; /* Remove the background repeat */

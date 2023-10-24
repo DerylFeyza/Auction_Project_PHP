@@ -54,14 +54,6 @@ function displayItems($statusFilter)
                             if ($statusFilter == 'Auctioned') {
                                 echo '<a href="item_update_status.php?id=' . $dt_item['id'] . '&action=Reject" onclick="return confirm(\'Apakah anda yakin untuk reject item ini?\')" class="btn btn-primary">Hapus Auction</a>';
                             }
-                            // if ($statusFilter == 'Pending') {
-                            //     echo '<a href="item_update_status.php?id=' . $dt_item['id'] . '&action=Reject" onclick="return confirm(\'Apakah anda yakin untuk reject item ini?\')" class="btn btn-primary">Reject</a>';
-                            //     echo '<a href="item_update_status.php?id=' . $dt_item['id'] . '&action=Approved" onclick="return confirm(\'Apakah anda yakin untuk Aprrove item ini?\')" class="btn btn-primary">Approve</a>';
-                            // }
-                            // if ($statusFilter == 'Pending') {
-                            //     echo '<a href="item_update_status.php?id=' . $dt_item['id'] . '&action=Reject" onclick="return confirm(\'Apakah anda yakin untuk reject item ini?\')" class="btn btn-primary">Reject</a>';
-                            //     echo '<a href="item_update_status.php?id=' . $dt_item['id'] . '&action=Approved" onclick="return confirm(\'Apakah anda yakin untuk Aprrove item ini?\')" class="btn btn-primary">Approve</a>';
-                            // }
                             ?>
                         </div>
                     </div>
