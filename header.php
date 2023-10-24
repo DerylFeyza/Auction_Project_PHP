@@ -76,9 +76,7 @@ session_start()
           $status_user = mysqli_fetch_array($query);
           if ($status_user['role'] == 'admin') {
             echo '
-            <li class="mb-3">
-            <a class="btn btn-primary w-100" id="offcanvasitem" href="tambah_item.php">Add Item</a>
-            </li>
+            
             <li class="mb-3">
             <a class="btn btn-primary w-100" id="offcanvasitem" href="item_manager.php">Manage Auction</a>
             </li>
@@ -89,6 +87,9 @@ session_start()
           }
         }
         ?>
+        <li class="mb-3">
+          <a class="btn btn-primary w-100" id="offcanvasitem" href="tambah_item.php">Add Item</a>
+        </li>
         <li class="mb-3">
           <a class="btn btn-primary w-100" id="offcanvasitem" href="publisher_item.php">Your Items</a>
         </li>

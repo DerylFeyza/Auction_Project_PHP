@@ -57,4 +57,3 @@ if (isset($_GET['id_user_touser'])) {
         echo "<script>alert('Failed to update user role to user');location.href='user_manager.php';</script>";
     }
 }
-?>
