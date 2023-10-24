@@ -19,7 +19,7 @@
         <input autocomplete="off" type="text" name="deskripsi" value="" class="form-control" required>
         Foto:
         <input autocomplete="off" type="file" name="foto" class="form-control" required>
-        <input type="button" value="Tambah Buku" class="btn btn-primary" onclick="submitForm()">
+        <input type="button" value="Tambah Item" class="btn btn-primary" onclick="submitForm()">
     </form>
 
     <div id="response"></div>
