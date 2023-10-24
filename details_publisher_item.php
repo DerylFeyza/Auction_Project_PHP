@@ -3,12 +3,12 @@
     include "koneksi.php";
     if(isset($_GET['id'])){
         $_SESSION['item_id'] = $_GET['id'];
+        
     }
     else if(!isset($_GET['id'])){
         'location: auction.php';
     }
-    $item_id = $_SESSION['item_id'];
-    $qry_detail_item = mysqli_query($conn, "select * from item where id = '$item_id'");
+    $qry_detail_item = mysqli_query($conn, "select * from item where id = '".$_GET['id_item']."'");
     $dt_item = mysqli_fetch_array($qry_detail_item);
 
     $qry_get_item=mysqli_query($conn,"select * from item where 
