@@ -11,7 +11,7 @@ include "header.php";
 </head>
 
 <body>
-    <div class="container" id="tambah-item-form">
+    <div class="container" id="tambah-item-form" style="margin-top: 100px;">
         <form id="myForm" enctype="multipart/form-data">
             nama:
             <input autocomplete="off" type="text" name="name" value="" class="form-control" required>

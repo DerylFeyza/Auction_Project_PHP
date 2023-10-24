@@ -62,15 +62,18 @@ session_start()
     </div>
   </nav>
 
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <ul class="list-unstyled">
+ 
         <?php
         if (isset($_SESSION['status_login'])) {
+          echo' <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="list-unstyled">
+            
+            ';
           include "koneksi.php";
           $query = mysqli_query($conn, "select * from client where id = '" . $_SESSION['id'] . "'");
           $status_user = mysqli_fetch_array($query);
@@ -85,9 +88,7 @@ session_start()
             </li>
             ';
           }
-        }
-        ?>
-        <li class="mb-3">
+          echo' <li class="mb-3">
           <a class="btn btn-primary w-100" id="offcanvasitem" href="tambah_item.php">Add Item</a>
         </li>
         <li class="mb-3">
@@ -96,7 +97,10 @@ session_start()
       </ul>
     </div>
   </div>
-
+';
+        }
+        ?>
+       
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
   <script>
