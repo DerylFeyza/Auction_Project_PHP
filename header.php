@@ -17,7 +17,7 @@ session_start()
 </head>
 
 <body>
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark" id="nav">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-white bg-white" id="nav">
     <div class="container">
       <a class="navbar-brand fw-bold fs-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
         aria-controls="offcanvasExample">Auction</a>
@@ -62,24 +62,23 @@ session_start()
     </div>
   </nav>
 
- 
-        <?php
-        if (isset($_SESSION['status_login'])) {
-          echo' <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+
+  <?php
+  if (isset($_SESSION['status_login'])) {
+    echo '<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
-            <ul class="list-unstyled">
-            
+            <ul class="list-unstyled">  
             ';
-          include "koneksi.php";
-          $query = mysqli_query($conn, "select * from client where id = '" . $_SESSION['id'] . "'");
-          $status_user = mysqli_fetch_array($query);
-          if ($status_user['role'] == 'admin') {
-            echo '
-            
+
+    include "koneksi.php";
+    $query = mysqli_query($conn, "select * from client where id = '" . $_SESSION['id'] . "'");
+    $status_user = mysqli_fetch_array($query);
+    if ($status_user['role'] == 'admin') {
+      echo '
             <li class="mb-3">
             <a class="btn btn-primary w-100" id="offcanvasitem" href="item_manager.php">Manage Auction</a>
             </li>
@@ -87,8 +86,9 @@ session_start()
             <a class="btn btn-primary w-100" id="offcanvasitem" href="user_manager.php">Manage Users</a>
             </li>
             ';
-          }
-          echo' <li class="mb-3">
+    }
+
+    echo ' <li class="mb-3">
           <a class="btn btn-primary w-100" id="offcanvasitem" href="tambah_item.php">Add Item</a>
         </li>
         <li class="mb-3">
@@ -98,30 +98,8 @@ session_start()
     </div>
   </div>
 ';
-        }
-        ?>
-       
+  }
+  ?>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    var nav = document.getElementById('nav');
-    var isScrolled = false;
-
-    window.addEventListener('scroll', function () {
-      if (window.pageYOffset > 0) {
-        if (!isScrolled) {
-          nav.style.backgroundColor = 'white'; nav.classList.remove('navbar-dark');
-          nav.classList.add('navbar-white');
-          isScrolled = true;
-        }
-      } else {
-        nav.style.backgroundColor = 'transparent'; // Mengubah latar belakang menjadi transparan
-        nav.classList.remove('navbar-white'); // Menghapus kelas nav-dark
-        nav.classList.add('navbar-dark'); // Menghapus kelas nav-dark
-        isScrolled = false;
-      }
-    });
-  </script>
-</body>
-
-</html>
