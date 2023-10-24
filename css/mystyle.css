@@ -1,6 +1,7 @@
-body, html {
+body,
+html {
   height: 100%;
-  background-color: #FFE4D6;
+  background-color: #ffe4d6;
   color: white;
 }
 
@@ -11,7 +12,8 @@ body {
 
 .bg {
   height: 100%;
-  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%), url("/Project_PHP/Bgs/menggoda.jpg");
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%),
+    url("/Project_PHP/Bgs/menggoda.jpg");
   background-position: top center; /* Set the background position to top center */
   background-size: cover;
   background-repeat: no-repeat; /* Remove the background repeat */
@@ -34,7 +36,7 @@ body {
   display: inline-block;
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #B0578D;
+  background-color: #b0578d;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -46,7 +48,7 @@ body {
 
 /* Hover Effect */
 .button:hover {
-  background-color: #B0578D;
+  background-color: #b0578d;
 }
 
 .textbox {
@@ -70,7 +72,7 @@ body {
 }
 
 .card-wrapper {
-  background-color: #FACBEA;
+  background-color: #facbea;
   padding: 50px;
   border-radius: 10px;
   opacity: 0.9;
@@ -96,13 +98,13 @@ body {
 }
 
 table {
-  border: #B0578D solid 1px;
+  border: #b0578d solid 1px;
   border-radius: 10px;
-  background-color: #B0578D;
+  background-color: #b0578d;
 }
 
 .table-container {
-  background-color: #D988B9;
+  background-color: #d988b9;
   display: inline-block;
   border-radius: 20px;
   padding: 20px;
@@ -113,7 +115,7 @@ table {
 .item-info {
   text-align: center;
   width: 100%;
-  background-color: #D988B9;
+  background-color: #d988b9;
 }
 
 .item-info h1 {
@@ -121,7 +123,8 @@ table {
 }
 
 /* auction.php */
-.auction, h1 {
+.auction,
+h1 {
   text-align: center;
 }
 
@@ -135,7 +138,7 @@ table {
   margin-top: 80px;
 }
 
-.center{
+.center {
   margin: auto;
 }
 /*# sourceMappingURL=mystyle.css.map */

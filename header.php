@@ -13,46 +13,48 @@ session_start()
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Documenta</title>
+  <title>Auction</title>
 </head>
 
 <body>
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3 scrolled-navbar">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark" id="nav">
     <div class="container">
-      <a class="navbar-brand" href="#">Negawatt</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      <a class="navbar-brand fw-bold fs-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+        aria-controls="offcanvasExample">Auction</a>
+      <button class=" navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav me-auto mb-lg-0" style="display: flex;">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="home.php">Home</a>
+            <a class="nav-link fw-medium fs-5" aria-current="page" href="home.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="auction.php">Auction</a>
+            <a class="nav-link fw-medium fs-5" href="auction.php">Auction</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="logout.php">logoutidk</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login.php">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
-              aria-controls="offcanvasExample">Button</a>
-          </li>
+          <?php
+          if (isset($_SESSION['status_login']) && $_SESSION['status_login'] == true) {
+            // Tampilkan Logout jika pengguna sudah login
+            echo '<li class="nav-item">
+            <a class="nav-link fw-medium fs-5" href="logout.php">Logout</a>
+          </li>';
+          } else {
+            // Tampilkan Login jika pengguna belum login
+            echo '<li class="nav-item">
+            <a class="nav-link fw-medium fs-5" href="login.php">Login</a>
+          </li>';
+          }
+          ?>
         </ul>
-        <span class="navbar-text">
+        <span class="navbar-text ms-3 mt-2">
           <?php
           if (isset($_SESSION['status_login'])) {
             if ($_SESSION['status_login'] == true) {
-              echo '<h2>' . $_SESSION['username'] . '</h2>';
+              echo '<h4 style="text-transform: uppercase; color: brown">' . $_SESSION['username'] . '</h4>';
             }
           } else if (!isset($_SESSION['status_login'])) {
-            echo '<h4 class="bkp">Guest</h4>';
+            echo '<h3 style="color: brown;">Guest</h3>';
           }
           ?>
         </span>
@@ -60,47 +62,58 @@ session_start()
     </div>
   </nav>
 
-
   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-      <div>
-      </div>
-      <ul>
-        <li><a class="dropdown-item" id="offcanvasitem" href="tambah_item.php">bkp</a></li>
+      <ul class="list-unstyled">
         <?php
         if (isset($_SESSION['status_login'])) {
           include "koneksi.php";
           $query = mysqli_query($conn, "select * from client where id = '" . $_SESSION['id'] . "'");
           $status_user = mysqli_fetch_array($query);
           if ($status_user['role'] == 'admin') {
-            echo '<li><a class="dropdown-item" id="offcanvasitem" href="item_manager.php">Manage Auction</a></li>';
-            echo '<li><a class="dropdown-item" id="offcanvasitem" href="user_manager.php">Manage Users</a></li>';
-
+            echo '
+            <li class="mb-3">
+            <a class="btn btn-primary w-100" id="offcanvasitem" href="tambah_item.php">Add Item</a>
+            </li>
+            <li class="mb-3">
+            <a class="btn btn-primary w-100" id="offcanvasitem" href="item_manager.php">Manage Auction</a>
+            </li>
+            <li class="mb-3">
+            <a class="btn btn-primary w-100" id="offcanvasitem" href="user_manager.php">Manage Users</a>
+            </li>
+            ';
           }
         }
         ?>
-        <li><a class="dropdown-item" id="offcanvasitem" href="publisher_item.php">ur items</a></li>
+        <li class="mb-3">
+          <a class="btn btn-primary w-100" id="offcanvasitem" href="publisher_item.php">Your Items</a>
+        </li>
       </ul>
     </div>
-  </div>
   </div>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-  <script type="text/javascript">
-    var nav = document.querySelector('nav');
+  <script>
+    var nav = document.getElementById('nav');
+    var isScrolled = false;
 
     window.addEventListener('scroll', function () {
       if (window.pageYOffset > 0) {
-        nav.style.backgroundColor = '#FACBEA';
-        nav.classList.add('shadow');
+        if (!isScrolled) {
+          nav.style.backgroundColor = 'white'; nav.classList.remove('navbar-dark');
+          nav.classList.add('navbar-white');
+          isScrolled = true;
+        }
       } else {
-        nav.style.backgroundColor = '';
-        nav.classList.remove('bg-dark', 'shadow');
+        nav.style.backgroundColor = 'transparent'; // Mengubah latar belakang menjadi transparan
+        nav.classList.remove('navbar-white'); // Menghapus kelas nav-dark
+        nav.classList.add('navbar-dark'); // Menghapus kelas nav-dark
+        isScrolled = false;
       }
     });
   </script>
