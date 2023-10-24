@@ -100,7 +100,7 @@ session_start()
 
       window.addEventListener('scroll', function () {
         if (window.pageYOffset > 0) {
-            nav.style.backgroundColor = '#3f63c3';
+            nav.style.backgroundColor = '#FACBEA';
             nav.classList.add('shadow'); 
         } else {
             nav.style.backgroundColor = ''; 
