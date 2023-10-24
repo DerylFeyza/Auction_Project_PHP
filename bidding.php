@@ -56,7 +56,7 @@
                     $no++;
                     $id_user = $dt_bids['id_user'];
                     $qry_user = mysqli_query($conn, "SELECT username FROM client WHERE id = '$id_user'");
-                    $nama_user = mysqli_fetch_array($qry_user)
+                    $nama_user = mysqli_fetch_array($qry_user);
                     ?>
                     <tr>
                         <td><?=$no?></td>
