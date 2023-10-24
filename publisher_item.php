@@ -14,7 +14,7 @@
                 <h5 class="card-title"><?=$dt_item['name']?></h5>
                 <h4 class="card-title"><?=$dt_item['startprice']?></h4>
                 <p class="card-text"><?=substr($dt_item['deskripsi'], 0,20)?></p>
-                <a href="bidding.php?id=<?=$dt_item['id']?>" class="btn">See Details</a>
+                <a href="details_publisher_item.php?id_item=<?=$dt_item['id']?>" class="btn">See Details</a>
               </div>
             </div>
         </div>
