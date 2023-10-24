@@ -27,13 +27,13 @@
             <ul class="dropdown-menu">
                 <?php
                     if ( $dt_users['role'] == 'admin') {
-                        echo '<li><a class="dropdown-item" href="#">Delete</a></li>';
-
-          
+                        echo '<li><a class="dropdown-item" href="#">Demote To User</a></li>';
                     }
+                    if ( $dt_users['role'] == 'user') {
+                        echo '<li><a class="dropdown-item" href="user_managing.php?id_user_toadmin=' . $dt_users['id'] . '">Make Admin</a></li>';                    }
                 ?>
-                <li><a class="dropdown-item" href="user_delete.php?id_user=<?=$dt_users['id']?>">Delete User</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><a class="dropdown-item" href="user_managing.php?id_user=<?=$dt_users['id']?>">Delete User</a></li>
+                <li><a class="dropdown-item" href="user_managing.php?id_user_toadmin=<?=$dt_users['id']?>">Something else here</a></li>
             </ul>
             </div>
             </td>
