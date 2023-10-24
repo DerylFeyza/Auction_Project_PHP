@@ -1,4 +1,6 @@
 <?php 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 session_start()
 ?>
   
@@ -70,11 +72,21 @@ session_start()
   </div>
   <div class="offcanvas-body">
     <div>
-     
     </div>
     <ul>
     <li><a class="dropdown-item" id="offcanvasitem" href="tambah_item.php">bkp</a></li>
-    <li><a class="dropdown-item" id="offcanvasitem" href="item_manager.php">Manage Auction</a></li>
+<?php
+        if(isset($_SESSION['status_login'])){
+          include "koneksi.php";
+          $query=mysqli_query($conn,"select * from client where id = '".$_SESSION['id']."'");
+          $status_user = mysqli_fetch_array($query);
+          if ( $status_user['role'] == 'admin') {
+              echo '<li><a class="dropdown-item" id="offcanvasitem" href="item_manager.php">Manage Auction</a></li>';
+              echo '<li><a class="dropdown-item" id="offcanvasitem" href="user_manager.php">Manage Users</a></li>';
+
+          }
+      }           
+    ?>
     <li><a class="dropdown-item" id="offcanvasitem" href="publisher_item.php">ur items</a></li>
     </ul>
     </div>

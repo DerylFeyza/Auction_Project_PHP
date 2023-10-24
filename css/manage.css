@@ -1,6 +1,6 @@
 body{
     background-color: #0C111D;
-
+    color: white;
 }
 .card{
     background-color: rgb(32, 28, 28);
@@ -17,4 +17,16 @@ img{
 }
 form{
     padding-top: 100px;
+}
+
+/* USER MANAGER */
+.usermanager{
+    text-align: center;
+    margin-top: 100px;
+    width: 100%;
+}
+
+.usermanager .rows{
+    height: 70px;
+    margin-top: 50px;
 }
