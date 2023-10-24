@@ -84,7 +84,7 @@ $dt_item = mysqli_fetch_array($qry_detail_item);
                     </td>
                 </tr>
 
-            <?php
+                <?php
             }
             ?>
         </table>

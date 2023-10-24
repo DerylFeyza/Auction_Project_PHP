@@ -1,7 +1,8 @@
 <?php
 include "koneksi.php";
 
-function deleteUser($conn, $id_user) {
+function deleteUser($conn, $id_user)
+{
     $qry_hapus = mysqli_query($conn, "DELETE FROM client WHERE id = '$id_user'");
     if ($qry_hapus) {
         return true;
@@ -10,7 +11,8 @@ function deleteUser($conn, $id_user) {
     }
 }
 
-function updateUserRoleToAdmin($conn, $id_user) {
+function updateUserRoleToAdmin($conn, $id_user)
+{
     $qry_update = mysqli_query($conn, "UPDATE client SET role = 'admin' WHERE id = '$id_user'");
     if ($qry_update) {
         return true;
@@ -19,7 +21,8 @@ function updateUserRoleToAdmin($conn, $id_user) {
     }
 }
 
-function updateUserRoleToUser($conn, $id_user) {
+function updateUserRoleToUser($conn, $id_user)
+{
     $qry_update = mysqli_query($conn, "UPDATE client SET role = 'user' WHERE id = '$id_user'");
     if ($qry_update) {
         return true;
@@ -55,4 +58,3 @@ if (isset($_GET['id_user_touser'])) {
     }
 }
 ?>
-

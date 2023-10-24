@@ -54,7 +54,7 @@ include "koneksi.php";
                     </div>
                 </td>
             </tr>
-        <?php
+            <?php
         }
         ?>
     </tbody>
