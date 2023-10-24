@@ -12,7 +12,7 @@ if($_POST){
         $insert=mysqli_query($conn,"insert into client (username, password, role) 
         value ('".$username."','".md5($password)."','user')") or die(mysqli_error($conn));
         if($insert){
-            echo "<script>alert('Sukses menambahkan akun');location.href='signup.php';</script>";
+            echo "<script>alert('Sukses menambahkan akun');location.href='login.php';</script>";
         } else {
             echo "<script>alert('Gagal menambahkan akun');location.href='signup.php';</script>";
         }
