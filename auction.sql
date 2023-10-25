@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 07, 2023 at 05:52 AM
+-- Generation Time: Oct 25, 2023 at 04:11 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -33,6 +33,15 @@ CREATE TABLE `bids` (
   `bid` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `bids`
+--
+
+INSERT INTO `bids` (`id_user`, `id_item`, `bid`) VALUES
+(2, 4, 127),
+(2, 4, 127),
+(2, 4, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -51,7 +60,9 @@ CREATE TABLE `client` (
 --
 
 INSERT INTO `client` (`id`, `username`, `password`, `role`) VALUES
-(1, 'ryl', '123', 'admin');
+(2, 'ryl', '202cb962ac59075b964b07152d234b70', 'admin'),
+(6, 'bokep', '202cb962ac59075b964b07152d234b70', 'user'),
+(7, 'sex', '202cb962ac59075b964b07152d234b70', 'admin');
 
 -- --------------------------------------------------------
 
@@ -68,6 +79,13 @@ CREATE TABLE `item` (
   `deskripsi` text DEFAULT NULL,
   `status` enum('Pending','Approved','Cancelled','Auctioned','Sold') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `item`
+--
+
+INSERT INTO `item` (`id`, `id_publisher`, `name`, `startprice`, `cover`, `deskripsi`, `status`) VALUES
+(4, 2, 'loli', 555, 'Screenshot 2023-09-12 201455.png', 'children', 'Approved');
 
 --
 -- Indexes for dumped tables
@@ -93,13 +111,13 @@ ALTER TABLE `item`
 -- AUTO_INCREMENT for table `client`
 --
 ALTER TABLE `client`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `item`
 --
 ALTER TABLE `item`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
