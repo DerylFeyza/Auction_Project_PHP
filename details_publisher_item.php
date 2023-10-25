@@ -14,15 +14,6 @@ $qry_get_item = mysqli_query($conn, "select * from item where
     id = '" . $_GET['id_item'] . "'");
 $dt_item = mysqli_fetch_array($qry_get_item);
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <link rel="stylesheet" href="css/mystyle.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
 <div class="container bid-container">
     <div class="card-wrapper center">
         <form action="bidding_process.php" method="post">
@@ -105,3 +96,5 @@ $dt_item = mysqli_fetch_array($qry_get_item);
 
         xhr.send(formData);
     }
+</script>
+<?php include "footer.php" ?>
