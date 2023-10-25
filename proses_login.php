@@ -14,6 +14,7 @@ if ($_POST) {
             session_start();
             $_SESSION['id'] = $dt_login['id'];
             $_SESSION['username'] = $dt_login['username'];
+            $_SESSION['role'] = $dt_login['role'];
             $_SESSION['status_login'] = true;
             header("location: home.php");
         } else {

@@ -10,15 +10,7 @@ $item_id = $_SESSION['item_id'];
 $qry_detail_item = mysqli_query($conn, "select * from item where id = '$item_id'");
 $dt_item = mysqli_fetch_array($qry_detail_item);
 ?>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <link rel="stylesheet" href="css/mystyle.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
 <div class="container bid-container">
     <div class="card-wrapper">
         <form action="bidding_process.php" method="post">
@@ -71,7 +63,7 @@ $dt_item = mysqli_fetch_array($qry_detail_item);
                 $id_user = $dt_bids['id_user'];
                 $qry_user = mysqli_query($conn, "SELECT username FROM client WHERE id = '$id_user'");
                 $nama_user = mysqli_fetch_array($qry_user);
-                ?>
+            ?>
                 <tr>
                     <td>
                         <?= $no ?>
@@ -84,7 +76,7 @@ $dt_item = mysqli_fetch_array($qry_detail_item);
                     </td>
                 </tr>
 
-                <?php
+            <?php
             }
             ?>
         </table>

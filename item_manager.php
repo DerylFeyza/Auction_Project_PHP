@@ -1,5 +1,11 @@
 <?php
 include "header.php";
+if (!isset($_SESSION['id'])) {
+    echo "<script>alert('belum login kontol');location.href='home.php';</script>";
+}
+else if($_SESSION['role'] !== 'admin'){
+    echo "<script>alert('admin mana kontol');location.href='home.php';</script>";
+}
 ?>
 <div class="container" style="padding-top: 5rem;">
     <div class="section">

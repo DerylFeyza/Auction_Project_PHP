@@ -12,6 +12,7 @@
             <a href="login.php">Back to login page</a>
         </form>
     </div>
+</div>
     </body>
 
     </html>
