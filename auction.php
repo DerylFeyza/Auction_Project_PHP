@@ -1,33 +1,9 @@
 <?php include "header.php" ?>
-<style>
-    .card {
-        background-color: rgb(32, 28, 28);
-        color: white;
-    }
-
-    .btn {
-        background-color: rgb(91, 46, 255);
-        border: 1px solid black;
-    }
-
-    img {
-
-        width: 100px;
-        height: 250px;
-        object-fit: cover;
-        background-position: top center;
-    }
-
-    .smh {
-        margin-bottom: 20px;
-    }
-</style>
 
 <div class="container" style="margin-top: 5rem" id="auction-container">
-    <h1 class="auction">
+    <h1 class="text-center">
         Ongoing Auction
     </h1>
-    <hr>
     <div class="row">
         <?php
         include "koneksi.php";
@@ -38,24 +14,24 @@
                 <div class="card">
                     <img src="/Project_PHP/itemasset/<?= $dt_item['cover'] ?>" class="card-img-top">
                     <div class="card-body">
-                        <h5 class="card-title">
+                        <h2 class="card-title">
                             <?= $dt_item['name'] ?>
-                        </h5>
-                        <h4 class="card-title">
+                        </h2>
+                        <h5 class="card-title">
                             <?= $dt_item['startprice'] ?>
-                        </h4>
+                        </h5>
                         <p class="card-text">
                             <?= substr($dt_item['deskripsi'], 0, 20) ?>
                         </p>
-                        <a href="bidding.php?id=<?= $dt_item['id'] ?>" class="btn">Bid her</a>
+                        <a href="bidding.php?id=<?= $dt_item['id'] ?>" class="btn btn-primary w-100">Bid here</a>
                     </div>
                 </div>
             </div>
             <?php
         }
         ?>
-        <h1>Coming Soon</h1>
-        <hr>
+
+        <h1 class="mt-5 text-center">Coming Soon</h1>
         <?php
         include "koneksi.php";
         $qry_item = mysqli_query($conn, "SELECT * FROM item WHERE STATUS = 'Approved'");
