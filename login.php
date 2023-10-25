@@ -1,20 +1,21 @@
 <?php include
     "header.php"
     ?>
+<link rel="stylesheet" href="css/loginstyle.css">
 <div class="login-container" id="login-container">
     <div class="form-container log-in-container">
         <form action="proses_login.php" method="post">
             <h1>Login</h1>
-            <div class="social-container">
-                <a href="#" class="social"><i class="fa fa-facebook fa-2x"></i></a>
-                <a href="#" class="social"><i class="fab fa fa-twitter fa-2x"></i></a>
-            </div>
-            <span>or use your account</span>
             <input autocomplete="off" type="text" name="username" value="" class="form-control" />
             <input type="password" name="password" id="password" class="form-control" />
-            <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()"> Show Password
-            <a href="signup.php">Or Sign Up Here</a>
+            <div class="d-flex">
+                <p>Show Password </p>
+                <div class="mt-3 ms-2">
+                    <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()">
+                </div>
+            </div>
             <button type="submit" id="Login">Log In</button>
+            <a href="signup.php" class="fw-normal fs-6">Or Sign Up Here</a>
         </form>
     </div>
     <div class="overlay-container">

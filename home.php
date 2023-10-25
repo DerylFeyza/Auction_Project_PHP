@@ -110,14 +110,13 @@ session_start()
         window.addEventListener('scroll', function () {
             if (window.pageYOffset > 0) {
                 if (!isScrolled) {
-                    nav.style.backgroundColor = 'white'; nav.classList.remove('navbar-dark');
+                    nav.style.backgroundColor = 'black'; 
                     nav.classList.add('navbar-white');
                     isScrolled = true;
                 }
             } else {
                 nav.style.backgroundColor = 'transparent';
                 nav.classList.remove('navbar-white');
-                nav.classList.add('navbar-dark');
                 isScrolled = false;
             }
         });
@@ -128,7 +127,7 @@ session_start()
             <?php
             if (isset($_SESSION['status_login'])) {
                 // This HTML block will be generated if the condition is true
-                echo '<h2>Welcome <span style="text-transform:uppercase; color: brown">' . $_SESSION['username'] . '</span> Go Buy Some Slave.</h2>';
+                echo '<h1>Welcome <span style="text-transform:uppercase; color: brown">' . $_SESSION['username'] . '</span> Go Buy Some Slave.</h1>';
             } else if (!isset($_SESSION['status_login'])) {
                 echo '<h1>Welcome to the auction, please log in first</h1>';
                 echo '<a href=login.php class="btn btn-primary w-25 mt-3">Login</a>';
