@@ -1,4 +1,5 @@
 <?php
+
 session_start()
     ?>
 
@@ -142,4 +143,6 @@ session_start()
             <h1>Ongoin Auction</h1>
         </div>
     </div>
-    <?php include "footer.php" ?>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
