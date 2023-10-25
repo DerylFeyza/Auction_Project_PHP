@@ -4,6 +4,7 @@ include "header.php";
 <div class="container" id="tambah-item-form" style="padding-top: 6rem;">
     <div class="text-center">
         <h3>ADD ITEMS</h3>
+        <div id="response" class="mb-3"></div>
     </div>
     <div class="card shadow">
         <div class="card-body">
@@ -28,7 +29,6 @@ include "header.php";
             </form>
         </div>
     </div>
-    <div id="response"></div>
 </div>
 
 
