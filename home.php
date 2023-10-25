@@ -39,13 +39,13 @@ session_start()
                     if (isset($_SESSION['status_login']) && $_SESSION['status_login'] == true) {
                         // Tampilkan Logout jika pengguna sudah login
                         echo '<li class="nav-item">
-            <a class="nav-link fw-medium fs-5" href="logout.php">Logout</a>
-          </li>';
+                        <a class="nav-link fw-medium fs-5" href="logout.php">Logout</a>
+                        </li>';
                     } else {
                         // Tampilkan Login jika pengguna belum login
                         echo '<li class="nav-item">
-            <a class="nav-link fw-medium fs-5" href="login.php">Login</a>
-          </li>';
+                        <a class="nav-link fw-medium fs-5" href="login.php">Login</a>
+                        </li>';
                     }
                     ?>
                 </ul>
@@ -91,10 +91,10 @@ session_start()
         }
 
         echo ' <li class="mb-3">
-          <a class="btn btn-primary w-100" id="offcanvasitem" href="tambah_item.php">Add Item</a>
+        <a class="btn btn-primary w-100" id="offcanvasitem" href="tambah_item.php">Add Item</a>
         </li>
         <li class="mb-3">
-          <a class="btn btn-primary w-100" id="offcanvasitem" href="publisher_item.php">Your Items</a>
+        <a class="btn btn-primary w-100" id="offcanvasitem" href="publisher_item.php">Your Items</a>
         </li>
       </ul>
     </div>
