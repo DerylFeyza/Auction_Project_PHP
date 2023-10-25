@@ -63,4 +63,6 @@ include "header.php";
         xhr.send(formData);
     }
 </script>
-<?php include "footer.php" ?>
+</body>
+
+</html>

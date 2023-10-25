@@ -15,4 +15,6 @@
             <button type="submit" id="Login">Sign Up</button>
         </form>
     </div>
-    <?php include "footer.php" ?>
+    </body>
+
+    </html>

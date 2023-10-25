@@ -90,4 +90,6 @@ $dt_item = mysqli_fetch_array($qry_detail_item);
         </table>
     </div>
 </div>
-<?php include "footer.php" ?>
+</body>
+
+</html>

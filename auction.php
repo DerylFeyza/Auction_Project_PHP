@@ -23,7 +23,7 @@
     }
 </style>
 
-<div class="container" id="auction-container">
+<div class="container" style="margin-top: 5rem" id="auction-container">
     <h1 class="auction">
         Ongoing Auction
     </h1>
@@ -83,4 +83,6 @@
         ?>
     </div>
 </div>
-<?php include "footer.php" ?>
+</body>
+
+</html>
