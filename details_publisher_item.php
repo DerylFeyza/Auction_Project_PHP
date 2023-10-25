@@ -97,4 +97,6 @@ $dt_item = mysqli_fetch_array($qry_get_item);
         xhr.send(formData);
     }
 </script>
-<?php include "footer.php" ?>
+</body>
+
+</html>
