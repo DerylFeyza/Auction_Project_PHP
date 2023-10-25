@@ -11,45 +11,22 @@ $qry_detail_item = mysqli_query($conn, "select * from item where id = '$item_id'
 $dt_item = mysqli_fetch_array($qry_detail_item);
 ?>
 
-<div class="container bid-container">
-    <div class="card-wrapper">
-        <form action="bidding_process.php" method="post">
-            <div class="row">
-                <div class="image-container">
-                    <img src="/Project_PHP/itemasset/<?= $dt_item['cover'] ?>" method="post">
-                </div>
-                <div class="item-info">
-                    <thead>
-                        <tr>
-                            <td>
-                                <h1>
-                                    <?= $dt_item['name'] ?>
-                                </h1>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p></p>
-                                <?= $dt_item['deskripsi'] ?>
-                                </p>
-                            </td>
-                        </tr>
-                        <tr class="input-bid">
-                            <td><input type="number" name="bid" value="" class="form-control"></td>
-                        </tr>
-
-                        <tr>
-                            <td><input type="submit" name="simpan" value="Tambah Buku" class="btn btn-primary"></td>
-                        </tr>
-                    </thead>
-                </div>
-            </div>
-        </form>
+<div class="container d-flex gap-2" style="margin-top: 6rem;">
+    <div class="card" style="width: 30rem;">
+        <img src="/Project_PHP/itemasset/<?= $dt_item['cover'] ?>" class="rounded" method="post">
+        <div class="card-body">
+            <h5 class="card-title"><?= $dt_item['name'] ?></h5>
+            <p class="card-text"><?= $dt_item['deskripsi'] ?>.</p>
+            <form action="bidding_process.php" method="post">
+                <input type="number" name="bid" class="form-control" min="1">
+                <input type="submit" name="simpan" value="Place Bid" class="btn btn-primary w-100 mt-3"/>
+            </form>
+        </div>
     </div>
 
-    <div class="table-container">
-        <table class="table table-striped table-seg">
-            <thead>
+    <div class="container-fluid">
+        <table class="table table-hover table-striped shadow">
+            <thead class="table-info">
                 <th>NO</th>
                 <th>username</th>
                 <th>Bid</th>
@@ -63,7 +40,7 @@ $dt_item = mysqli_fetch_array($qry_detail_item);
                 $id_user = $dt_bids['id_user'];
                 $qry_user = mysqli_query($conn, "SELECT username FROM client WHERE id = '$id_user'");
                 $nama_user = mysqli_fetch_array($qry_user);
-            ?>
+                ?>
                 <tr>
                     <td>
                         <?= $no ?>
@@ -76,7 +53,7 @@ $dt_item = mysqli_fetch_array($qry_detail_item);
                     </td>
                 </tr>
 
-            <?php
+                <?php
             }
             ?>
         </table>
