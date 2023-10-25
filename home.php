@@ -103,7 +103,6 @@ session_start()
     ?>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         var nav = document.getElementById('nav');
         var isScrolled = false;
@@ -144,6 +143,4 @@ session_start()
             <h1>Ongoin Auction</h1>
         </div>
     </div>
-</body>
-
-</html>
+    <?php include "footer.php" ?>

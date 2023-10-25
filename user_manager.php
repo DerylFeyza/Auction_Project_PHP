@@ -60,3 +60,4 @@ include "koneksi.php";
         </tbody>
     </table>
 </div>
+<?php include "footer.php" ?>
