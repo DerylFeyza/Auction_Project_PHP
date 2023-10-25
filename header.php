@@ -47,6 +47,7 @@ session_start()
           }
           ?>
         </ul>
+        
         <span class="navbar-text ms-3 mt-2">
           <?php
           if (isset($_SESSION['status_login'])) {
@@ -61,7 +62,7 @@ session_start()
       </div>
     </div>
   </nav>
-  
+
 
 
   <?php
