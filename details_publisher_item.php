@@ -36,19 +36,28 @@ $dt_item = mysqli_fetch_array($qry_detail_item);
             <div class="container mt-5">
                 <form id="myForm" enctype="multipart/form-data" method="post" action="proses_update_details.php">
                     <input type="hidden" name="id" value="<?= $dt_item['id'] ?>">
-                    nama:
-                    <input autocomplete="off" type="text" name="name" value="<?= $dt_item['name'] ?>"
-                        class="form-control" required>
-                    harga awal:
-                    <input autocomplete="off" type="integer" name="startprice" value="<?= $dt_item['startprice'] ?>"
-                        class="form-control" required>
-                    Deskripsi:
-                    <input autocomplete="off" type="text" name="deskripsi" value="<?= $dt_item['deskripsi'] ?>"
-                        class="form-control" required>
-                    Foto:
-                    <input autocomplete="off" type="file" name="foto" class="form-control" required>
-                    <input type="submit" value="Tambah Buku" class="btn btn-primary">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nama:</label>
+                        <input type="text" autocomplete="off" name="name" value="<?= $dt_item['name'] ?>"
+                            class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="startprice" class="form-label">Harga Awal:</label>
+                        <input type="number" autocomplete="off" name="startprice" value="<?= $dt_item['startprice'] ?>"
+                            class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="deskripsi" class="form-label">Deskripsi:</label>
+                        <input type="text" autocomplete="off" name="deskripsi" value="<?= $dt_item['deskripsi'] ?>"
+                            class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="foto" class="form-label">Foto:</label>
+                        <input type="file" autocomplete="off" name="foto" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Tambah Buku</button>
                 </form>
+
             </div>
         </div>
     </div>
