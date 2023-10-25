@@ -12,14 +12,14 @@ if (isset($_SESSION['id'])) {
         } else {
             include "koneksi.php";
             if (empty($password)) {
-                $update = mysqli_query($conn, "update item set name='" . $name . "',deksripsi='" . $deksripsi . "', startrprice='" . $startrprice . "'") or die(mysqli_error($conn));
+                $update = mysqli_query($conn, "update item set name='" . $name . "',deskripsi='" . $deskripsi . "', startprice='" . $startprice . "'") or die(mysqli_error($conn));
                 if ($update) {
                     echo "<script>alert('Sukses update');location.href='details_publisher_item.php';</script>";
                 } else {
                     echo "<script>alert('Gagal update');location.href='proses_update_details.php?id_item=" . $id_item . "';</script>";
                 }
             } else {
-                $update = mysqli_query($conn, "update auction set name='" . $name . "',deksripsi='" . $deksripsi . "', startrprice='" . $startrprice . "'") or die(mysqli_error($conn));
+                $update = mysqli_query($conn, "update item set name='" . $name . "',deskripsi='" . $deksripsi . "', startprice='" . $startprice . "'") or die(mysqli_error($conn));
                 if ($update) {
                     echo "<script>alert('Sukses update');location.href='details_publisher_item.php';</script>";
                 } else {
@@ -28,13 +28,13 @@ if (isset($_SESSION['id'])) {
             }
         }
 
-        include "koneksi.php";
-        $insert = mysqli_query($conn, "insert into bids (id_user, id_item, bid) value ('" . $id_user . "','" . $id_item . "','" . $bid . "')") or die(mysqli_error($conn));
-        if ($insert) {
-            echo "<script>alert('Sukses menambahkan item');location.href='details_publisher_item.php';</script>";
-        } else {
-            echo "<script>alert('Gagal menambahkan item');location.href='details_publisher_item.php';</script>";
-        }
+        // include "koneksi.php";
+        // $insert = mysqli_query($conn, "insert into bids (id_user, id_item, bid) value ('" . $id_user . "','" . $id_item . "','" . $bid . "')") or die(mysqli_error($conn));
+        // if ($insert) {
+        //     echo "<script>alert('Sukses mengupdate item');location.href='details_publisher_item.php';</script>";
+        // } else {
+        //     echo "<script>alert('Gagal mengupdate item');location.href='details_publisher_item.php';</script>";
+        // }
     }
     // }
 } else {

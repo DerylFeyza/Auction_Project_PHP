@@ -54,14 +54,12 @@ $dt_item = mysqli_fetch_array($qry_get_item);
         nama:
         <input autocomplete="off" type="text" name="name" value="<?= $dt_item['name'] ?>" class="form-control" required>
         harga awal:
-        <input autocomplete="off" type="integer" name="startprice" value="<?= $dt_item['startprice'] ?>"
-            class="form-control" required>
+        <input autocomplete="off" type="integer" name="startprice" value="<?= $dt_item['startprice'] ?>" class="form-control" required>
         Deskripsi:
-        <input autocomplete="off" type="text" name="deskripsi" value="<?= $dt_item['deskripsi'] ?>" class="form-control"
-            required>
-        Foto:
-        <input autocomplete="off" type="file" name="foto" class="form-control" required>
-        <input type="button" value="Tambah Buku" class="btn btn-primary" onclick="submitForm()">
+        <input autocomplete="off" type="text" name="deskripsi" value="<?= $dt_item['deskripsi'] ?>" class="form-control" required>
+        <!-- Foto:
+        <input autocomplete="off" type="file" name="foto" class="form-control" required> -->
+        <input type="button" value="Update Auction" class="btn btn-primary" onclick="submitForm()">
     </form>
 
     <div id="response"></div>
