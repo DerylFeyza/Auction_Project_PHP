@@ -48,11 +48,11 @@ if (isset($_GET['id']) && isset($_GET['action'])) {
             break;
 
         case 'Sold':
-            $qry_status = mysqli_query($conn, "UPDATE item SET status = 'cancelled' WHERE id='$item_id'");
+            $qry_status = mysqli_query($conn, "UPDATE item SET status = 'sold' WHERE id='$item_id'");
             if ($qry_status) {
-                echo 'Success';
+                echo "<script>alert('Sukses end auction');location.href='item_manager.php';</script>";
             } else {
-                echo 'Failed';
+                echo "<script>alert('gagal end auction');location.href='item_manager.php';</script>";
             }
             break;
 
