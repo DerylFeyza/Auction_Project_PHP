@@ -112,7 +112,7 @@ session_start()
         window.addEventListener('scroll', function () {
             if (window.pageYOffset > 0) {
                 if (!isScrolled) {
-                    nav.style.backgroundColor = 'black'; 
+                    nav.style.backgroundColor = 'black';
                     nav.classList.add('navbar-white');
                     isScrolled = true;
                 }
@@ -137,8 +137,21 @@ session_start()
             }
             ?>
         </div>
-
     </div>
+
+    <section id="about" class="container d-grid align-items-center h-75">
+        <div class="row justify-content-around">
+            <div class="col-md-5">
+                <img src="./Bgs/auction.png"class="rounded shadow-lg"  width="500"  height="400">
+            </div>
+
+            <div class="col-md-5 my-auto">
+                <h1 class="fw-semibold">About</h1>
+                <h4>This content contains auctions, created using PHP to fulfill tasks, only admins can access the items being auctioned, members can only bid.</h4>
+            </div>
+        </div>
+    </section>
+
     <div class="details">
         <div class="textbox">
             <h1>Ongoin Auction</h1>
@@ -146,4 +159,5 @@ session_start()
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
