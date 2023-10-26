@@ -15,5 +15,6 @@ if($_POST){
     } else {
         echo "<script>alert('Gagal update');location.href='proses_update_details.php?id_item=" . $id_item . "';</script>";
     }
+    echo "<script>alert('Gagal update');location.href='home.php';</script>";
 }
 ?>

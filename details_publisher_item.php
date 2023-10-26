@@ -1,7 +1,6 @@
 <?php
 include "header.php";
 include "koneksi.php";
-session_start();
 if (isset($_GET['id_item'])) {
     $_SESSION['item_id'] = $_GET['id_item'];
 
@@ -12,7 +11,7 @@ $item_id = $_SESSION['item_id'];
 $qry_detail_item = mysqli_query($conn, "select * from item where id = '" . $item_id . "'");
 $dt_item = mysqli_fetch_array($qry_detail_item);
 ?>
-<div class="container">
+<div class="container" style="margin-top: 5rem;">
     <div class="row justify-content-evenly">
         <div class="col-md-4">
             <div class="card shadow">
@@ -53,7 +52,7 @@ $dt_item = mysqli_fetch_array($qry_detail_item);
                     </div>
                     <div class="mb-3">
                         <label for="foto" class="form-label">Foto:</label>
-                        <input type="file" autocomplete="off" name="foto" class="form-control" required>
+                        <input type="file" autocomplete="off" name="foto" class="form-control">
                     </div>
                     <button type="submit" class="btn btn-primary">Tambah Buku</button>
                 </form>
