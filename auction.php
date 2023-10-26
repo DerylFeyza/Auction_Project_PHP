@@ -52,7 +52,6 @@
                         <p class="card-text">
                             <?= substr($dt_item['deskripsi'], 0, 20) ?>
                         </p>
-                        <a href="bidding.php?id=<?= $dt_item['id'] ?>" class="btn">See Details</a>
                     </div>
                 </div>
             </div>
