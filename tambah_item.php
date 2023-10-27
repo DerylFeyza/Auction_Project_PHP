@@ -8,7 +8,7 @@ include "header.php";
     </div>
     <div class="card shadow">
         <div class="card-body">
-            <form id="myForm" enctype="multipart/form-data">
+            <form action="tambah_item_proses.php" method="post" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="name" class="form-label">Nama:</label>
                     <input type="text" id="name" name="name" class="form-control" required>
@@ -25,13 +25,14 @@ include "header.php";
                     <label for="foto" class="form-label">Foto:</label>
                     <input type="file" id="foto" name="foto" class="form-control" required>
                 </div>
-                <button type="button" class="btn btn-primary w-25" style="margin-left: 40%" onclick="submitForm()">Tambah Buku</button>
+                <input type="submit" value="Upload Item" name="submit">
+                <!-- <button type="button" class="btn btn-primary w-25" style="margin-left: 40%" onclick="submitForm()">Tambah Buku</button> -->
             </form>
         </div>
     </div>
 </div>
 
-
+<!-- 
 <script>
     function submitForm() {
         var form = document.getElementById("myForm");
@@ -62,7 +63,7 @@ include "header.php";
 
         xhr.send(formData);
     }
-</script>
+</script> -->
 </body>
 
 </html>

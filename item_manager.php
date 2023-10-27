@@ -1,5 +1,6 @@
 <?php
 include "header.php";
+include "koneksi.php";
 if (!isset($_SESSION['id'])) {
     echo "<script>alert('belum login kontol');location.href='home.php';</script>";
 }

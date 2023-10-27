@@ -12,7 +12,7 @@
             ?>
             <div class="smh col-md-3">
                 <div class="card">
-                    <img src="/Project_PHP/itemasset/<?= $dt_item['cover'] ?>" class="card-img-top">
+                    <img src="display_image.php?image_id=1"/>
                     <div class="card-body">
                         <h2 class="card-title">
                             <?= $dt_item['name'] ?>
@@ -39,7 +39,7 @@
             ?>
             <div class="smh col-md-3">
                 <div class="card">
-                    <img src="/Project_PHP/itemasset/<?= $dt_item['cover'] ?>" class="card-img-top">
+                <img src="display_image.php?image_id=1"/>
                     <div class="card-body">
                         <h5 class="card-title">
                             <?= $dt_item['name'] ?>

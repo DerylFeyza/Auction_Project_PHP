@@ -29,7 +29,7 @@ function displayItems($statusFilter)
             <div class="card my-4 shadow" style="max-width: 500px;">
                 <div class="row g-0">
                     <div class="col-md-4 my-auto">
-                        <img src="/Project_PHP/itemasset/<?= $dt_item['cover'] ?>" class="rounded w-100">
+                    <img src="display_image.php?image_id=<?php echo $dt_item['id']; ?>" class="rounded w-100" />
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
