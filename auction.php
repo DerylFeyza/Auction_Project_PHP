@@ -12,7 +12,7 @@
             ?>
             <div class="smh col-md-3">
                 <div class="card">
-                    <img src="display_image.php?image_id=1"/>
+                <img src="display_image.php?image_id=<?php echo $dt_item['id']; ?>" class="rounded w-100" />
                     <div class="card-body">
                         <h2 class="card-title">
                             <?= $dt_item['name'] ?>
@@ -41,7 +41,7 @@
             ?>
             <div class="smh col-md-3">
                 <div class="card">
-                <img src="display_image.php?image_id=1"/>
+                <img src="display_image.php?image_id=<?php echo $dt_item['id']; ?>" class="rounded w-100" />
                     <div class="card-body">
                         <h5 class="card-title">
                             <?= $dt_item['name'] ?>

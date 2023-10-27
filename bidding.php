@@ -13,7 +13,7 @@ $dt_item = mysqli_fetch_array($qry_detail_item);
 
 <div class="container d-flex gap-2" style="margin-top: 6rem;">
     <div class="card" style="width: 30rem;">
-        <img src="/Project_PHP/itemasset/<?= $dt_item['cover'] ?>" class="rounded" method="post">
+        <img src="display_image.php?image_id=<?php echo $dt_item['id']; ?>" class="rounded w-100" />
         <div class="card-body">
             <h5 class="card-title"><?= $dt_item['name'] ?></h5>
             <p class="card-text"><?= $dt_item['deskripsi'] ?>.</p>

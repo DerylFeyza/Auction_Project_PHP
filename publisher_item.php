@@ -13,7 +13,7 @@ if (!isset($_SESSION['id'])) {
       ?>
       <div class="col-md-3">
         <div class="card shadow">
-          <img src="/Project_PHP/itemasset/<?= $dt_item['cover'] ?>" class="card-img-top">
+        <img src="display_image.php?image_id=<?php echo $dt_item['id']; ?>" class="rounded w-100" />
           <div class="card-body">
             <h2 class="card-title">
               <?= $dt_item['name'] ?>
