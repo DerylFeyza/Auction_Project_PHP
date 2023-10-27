@@ -4,7 +4,7 @@
     <h1 class="text-center">
         Ongoing Auction
     </h1>
-    <div class="row">
+    <div class="row min-h-75">
         <?php
         include "koneksi.php";
         $qry_item = mysqli_query($conn, "SELECT * FROM item WHERE STATUS = 'Auctioned'");
@@ -30,8 +30,10 @@
             <?php
         }
         ?>
+    </div>
 
-        <h1 class="mt-5 text-center">Coming Soon</h1>
+    <h1 class="mt-5 text-center">Coming Soon</h1>
+    <div class="row min-h-75">
         <?php
         include "koneksi.php";
         $qry_item = mysqli_query($conn, "SELECT * FROM item WHERE STATUS = 'Approved'");
@@ -50,7 +52,6 @@
                         <p class="card-text">
                             <?= substr($dt_item['deskripsi'], 0, 20) ?>
                         </p>
-                        <a href="bidding.php?id=<?= $dt_item['id'] ?>" class="btn">See Details</a>
                     </div>
                 </div>
             </div>
@@ -58,6 +59,7 @@
         }
         ?>
     </div>
+
 </div>
 </body>
 

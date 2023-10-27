@@ -13,7 +13,7 @@ session_start()
     <link href="Bgs/logo.svg" rel="icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="css/home.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <title>Auction</title>
@@ -112,7 +112,7 @@ session_start()
         window.addEventListener('scroll', function () {
             if (window.pageYOffset > 0) {
                 if (!isScrolled) {
-                    nav.style.backgroundColor = 'black'; 
+                    nav.style.backgroundColor = 'black';
                     nav.classList.add('navbar-white');
                     isScrolled = true;
                 }
@@ -137,8 +137,23 @@ session_start()
             }
             ?>
         </div>
-
     </div>
+
+    <section id="about" class="container">
+        <div class="row justify-content-around">
+            <div class="col-md-5">
+                <div class="image-container">
+                    <img src="./Bgs/auction.png"class="rounded image shadow-lg">
+                </div>
+            </div>
+
+            <div class="col-md-5 my-auto">
+                <h1 class="fw-semibold">About</h1>
+                <p class="fw-medium">This content contains auctions, created using PHP to fulfill the task, only admin can access the items being auctioned, members can only bid. Make sure to log in first before bidding.</p>
+            </div>
+        </div>
+    </section>
+
     <div class="details">
         <div class="textbox">
             <h1>Ongoin Auction</h1>
@@ -146,4 +161,5 @@ session_start()
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

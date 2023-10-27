@@ -9,13 +9,24 @@ session_start()
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
   </style>
-   <link href="Bgs/logo.svg" rel="icon">
+  <link href="Bgs/logo.svg" rel="icon">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <title>Auction</title>
 </head>
+
+
+<style>
+  .min-h-75 {
+    min-height: 75vh;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+</style>
 
 <body>
   <nav class="navbar fixed-top navbar-expand-lg navbar-white bg-white" id="nav">
@@ -48,7 +59,7 @@ session_start()
           }
           ?>
         </ul>
-        
+
         <span class="navbar-text ms-3 mt-2">
           <?php
           if (isset($_SESSION['status_login'])) {
@@ -103,5 +114,5 @@ session_start()
 ';
   }
   ?>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -1,7 +1,7 @@
 <?php include
     "header.php"
     ?>
-<link rel="stylesheet" href="css/loginstyle.css">
+<link rel="stylesheet" href="css/login.css">
 <div class="sign-up-container">
     <div class="form-container signup-container">
         <form class="login" action="proses_signup.php" method="post">
