@@ -23,7 +23,8 @@ if (isset($_POST["submit"])) {
         $stmt = $conn->prepare("INSERT INTO item (id_publisher, name, startprice, cover, covertype, deskripsi, status) VALUES (?, ?, ?, ?, ?, ?, ?)");
         $stmt->bind_param("issssss", $id_publisher, $name, $startprice, $file_content, $imgType, $deskripsi, $status);
         if ($stmt->execute()) {
-            echo "Data inserted into the database successfully.";
+            echo "<script>alert('sukses tambah item');location.href='tambah_item.php';</script>";
+            
         } else {
             echo "Error: " . $conn->error;
         }

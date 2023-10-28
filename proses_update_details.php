@@ -7,10 +7,10 @@ if($_POST){
     include "koneksi.php";
     $imgType = $_FILES['foto']['type'];
     $file_content = file_get_contents($_FILES['foto']["tmp_name"]);    
-    $stmt = $conn->prepare("UPDATE item SET name=?, startprice=?, cover=?, covertype=?, deskripsi=?, status=? WHERE id=?");
-    $stmt->bind_param("ssssssi", $name, $startprice, $file_content, $imgType, $deskripsi, $status, $id);
+    $stmt = $conn->prepare("UPDATE item SET name=?, startprice=?, cover=?, covertype=?, deskripsi=? WHERE id=?");
+    $stmt->bind_param("sssssi", $name, $startprice, $file_content, $imgType, $deskripsi, $id);
     if ($stmt->execute()) {
-        echo "<script>alert('sukses update');location.href='home.php';</script>";
+        echo "<script>alert('sukses update');location.href='details_publisher_item.php';</script>";
     } else {
         echo "Error: " . $conn->error;
     }
