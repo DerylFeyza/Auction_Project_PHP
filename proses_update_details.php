@@ -5,18 +5,14 @@ if($_POST){
     $deskripsi = $_POST['deskripsi'];
     $startprice = $_POST['startprice'];
     include "koneksi.php";
-    
-    $update = mysqli_query($conn, "update item set name='" . $name . "', cover='" . $_FILES["foto"]["name"] . ", cover='" . $deskripsi . "', startprice='" . $startprice . "' where id = '".$id."' ") or die(mysqli_error($conn));
-    if ($update) {
-        if (move_uploaded_file($_FILES["foto"]["tmp_name"], $target_file)) {
-            $result = mysqli_query($conn, "select cover from item where id='".$id."'");
-            $row = mysqli_fetch_assoc($result);
-            $filename = $row['cover'];
-            unlink('itemasset/' . $filename);
-        }
+    $imgType = $_FILES['foto']['type'];
+    $file_content = file_get_contents($_FILES['foto']["tmp_name"]);    
+    $stmt = $conn->prepare("UPDATE item SET name=?, startprice=?, cover=?, covertype=?, deskripsi=?, status=? WHERE id=?");
+    $stmt->bind_param("ssssssi", $name, $startprice, $file_content, $imgType, $deskripsi, $status, $id);
+    if ($stmt->execute()) {
+        echo "<script>alert('sukses update');location.href='home.php';</script>";
     } else {
-        echo "<script>alert('Gagal update');location.href='proses_update_details.php?id_item=" . $id_item . "';</script>";
+        echo "Error: " . $conn->error;
     }
-    echo "<script>alert('Gagal update');location.href='home.php';</script>";
 }
 ?>
