@@ -25,8 +25,7 @@ include "header.php";
                     <label for="foto" class="form-label">Foto:</label>
                     <input type="file" id="foto" name="foto" class="form-control" required>
                 </div>
-                <input type="submit" value="Upload Item" name="submit">
-                <!-- <button type="button" class="btn btn-primary w-25" style="margin-left: 40%" onclick="submitForm()">Tambah Buku</button> -->
+                <input type="submit" class="btn btn-primary w-25" style="margin-left: 40%" value="Upload Item" name="submit">
             </form>
         </div>
     </div>

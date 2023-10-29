@@ -143,20 +143,49 @@ session_start()
         <div class="row justify-content-around">
             <div class="col-md-5">
                 <div class="image-container">
-                    <img src="./Bgs/auction.png"class="rounded image shadow-lg">
+                    <img src="./Bgs/auction.png" class="rounded image shadow-lg">
                 </div>
             </div>
 
             <div class="col-md-5 my-auto">
                 <h1 class="fw-semibold">About</h1>
-                <p class="fw-medium">This content contains auctions, created using PHP to fulfill the task, only admin can access the items being auctioned, members can only bid. Make sure to log in first before bidding.</p>
+                <p class="fw-medium">This content contains auctions, created using PHP to fulfill the task, only admin
+                    can access the items being auctioned, members can only bid. Make sure to log in first before
+                    bidding.</p>
             </div>
         </div>
     </section>
 
     <div class="details">
-        <div class="textbox">
-            <h1>Ongoin Auction</h1>
+        <div class="textbox container">
+            <h1 class="mb-5">Ongoin Auction</h1>
+            <div class="row">
+                <?php
+                include "koneksi.php";
+                $qry_item = mysqli_query($conn, "SELECT * FROM item WHERE STATUS = 'Auctioned'");
+                while ($dt_item = mysqli_fetch_array($qry_item)) {
+                    ?>
+                    <div class="col-md-3">
+                        <div class="card border-0">
+                            <img src="display_image.php?image_id=<?php echo $dt_item['id']; ?>" class="rounded w-100" />
+                            <div class="card-body">
+                                <h2 class="card-title">
+                                    <?= $dt_item['name'] ?>
+                                </h2>
+                                <h5 class="card-title">
+                                    <?= $dt_item['startprice'] ?>
+                                </h5>
+                                <p class="card-text">
+                                    <?= substr($dt_item['deskripsi'], 0, 20) ?>
+                                </p>
+                                <a href="bidding.php?id=<?= $dt_item['id'] ?>" class="btn btn-primary w-100">Bid here</a>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                }
+                ?>
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>

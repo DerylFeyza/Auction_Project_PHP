@@ -18,27 +18,26 @@ if (isset($_POST["submit"])) {
     if ($_FILES["foto"]["error"] !== UPLOAD_ERR_OK) {
         $response['success'] = false;
         $response['message'] = 'File upload error: ' . $_FILES["foto"]["error"];
-    }
-    else{
+    } else {
         $stmt = $conn->prepare("INSERT INTO item (id_publisher, name, startprice, cover, covertype, deskripsi, status) VALUES (?, ?, ?, ?, ?, ?, ?)");
         $stmt->bind_param("issssss", $id_publisher, $name, $startprice, $file_content, $imgType, $deskripsi, $status);
         if ($stmt->execute()) {
-            echo "<script>alert('sukses tambah item');location.href='tambah_item.php';</script>";
-            
+            echo "<script>alert('Sukses menambahkan item');location.href='tambah_item.php';</script>";
         } else {
-            echo "Error: " . $conn->error;
+            echo "<script>alert('Error: Gagal menambahkan item');</script>";
         }
+
         $stmt->close();
         $conn->close();
-    
+
         $response['success'] = true;
         $response['message'] = 'Sukses menambahkan item';
     }
-   
+
 } else {
     $response['success'] = false;
     $response['message'] = 'Error uploading the file';
 }
 
-header('Content-Type: application/json');
-echo json_encode($response);
+// header('Content-Type: application/json');
+// echo json_encode($response);
