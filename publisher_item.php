@@ -22,7 +22,7 @@ if (!isset($_SESSION['id'])) {
               <?= $dt_item['startprice'] ?>
             </h5>
             <p class="card-text">
-              <?= substr($dt_item['deskripsi'], 0, 20) ?>
+              <?= $dt_item['deskripsi'] ?>
             </p>
             <a href="details_publisher_item.php?id_item=<?= $dt_item['id'] ?>" class="btn btn-primary w-100">See Details</a>
           </div>
