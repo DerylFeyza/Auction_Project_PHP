@@ -52,7 +52,7 @@ $dt_item = mysqli_fetch_array($qry_detail_item);
                     </div>
                     <div class="mb-3">
                         <label for="foto" class="form-label">Foto:</label>
-                        <input type="file" autocomplete="off" name="foto" class="form-control" required>
+                        <input type="file" autocomplete="off" name="foto"  class="form-control">
                     </div>
                     <button type="submit" class="btn btn-primary">Tambah Buku</button>
                 </form>
