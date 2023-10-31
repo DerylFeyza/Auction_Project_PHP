@@ -2,8 +2,8 @@
     include "koneksi.php";
     
 
-if ($_POST) {
-    $id = $_POST['id'];
+if ($_GET) {
+    $id = $_GET['id'];
     $history_query = mysqli_query($conn, "SELECT * FROM bids WHERE bid = (SELECT MAX(bid) FROM bids) AND id_item = ".$id); 
     $dt_history = mysqli_fetch_array($history_query);
     $id_item = $dt_history["id_item"];
