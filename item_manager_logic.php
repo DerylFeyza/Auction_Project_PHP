@@ -56,6 +56,8 @@ function displayItems($statusFilter)
                             }
                             if ($statusFilter == 'Sold') {
                                 echo '<a href="item_update_status.php?id=' . $dt_item['id'] . '&action=Reject" onclick="return confirm(\'Apakah anda yakin untuk menghapus auction ini?\')" class="btn btn-warning">Delete</a>';
+                                echo '<a href="history.php?id=' . $dt_item['id']>'"class="btn btn-warning">Weiner</a>';
+
                             }
                             ?>
                         </div>
