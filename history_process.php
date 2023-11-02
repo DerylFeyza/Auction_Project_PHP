@@ -1,16 +1,14 @@
 <?php 
     include "koneksi.php";
-    
-
-if ($_GET) {
+    if ($_GET) {
     $id = $_GET['id'];
-    $history_query = mysqli_query($conn, "SELECT * FROM bids WHERE bid = (SELECT MAX(bid) FROM bids) AND id_item = ".$id); 
+    $history_query = mysqli_query($conn, "SELECT * FROM bids WHERE bid = (SELECT MAX(bid) FROM bids WHERE id_item = ".$id.") AND id_item = ".$id); 
     $dt_history = mysqli_fetch_array($history_query);
-    $id_item = $dt_history["id_item"];
     $id_winner = $dt_history["id_user"];
+    $id_item = $dt_history["id_item"];
     $final_bid = $dt_history["bid"];
 
-    $winner_query =   mysqli_query($conn, "SELECT username FROM client WHERE id =".$id_winner); 
+    $winner_query =   mysqli_query($conn, "SELECT * FROM client WHERE id =". $id_winner); 
     $dt_history_winner = mysqli_fetch_array($winner_query);
     $winner = $dt_history_winner["username"];
 
