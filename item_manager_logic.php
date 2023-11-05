@@ -55,8 +55,8 @@ function displayItems($statusFilter)
                                 echo '<a href="item_update_status.php?id=' . $dt_item['id'] . '&action=Sold" onclick="return confirm(\'Apakah anda yakin untuk menghentikan auction ini?\')" class="btn btn-warning">End Auction</a>';
                             }
                             if ($statusFilter == 'Sold') {
-                                echo '<a href="item_update_status.php?id=' . $dt_item['id'] . '&action=Reject" onclick="return confirm(\'Apakah anda yakin untuk menghapus auction ini?\')" class="btn btn-warning">Delete</a>';
-                                echo '<a href="history.php?id_item=' . $dt_item['id'] .'" class="btn btn-warning">Weiner</a>';
+                                echo '<a href="item_update_status.php?id=' . $dt_item['id'] . '&action=Reject" onclick="return confirm(\'Apakah anda yakin untuk menghapus auction ini?\')" class="btn btn-danger">Delete</a>';
+                                echo '<a href="history.php?id_item=' . $dt_item['id'] .'" class="btn btn-primary ms-2">Winner</a>';
 
                             }
                             ?>

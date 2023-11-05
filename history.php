@@ -23,16 +23,15 @@ if ($_GET['id_item']) {
                         <?= $item_id ?>
                     </h5>
                     <p class="card-text">
-                        <?= substr($dt_history['final_bid'], 0, 20) ?>
+                        <?= $dt_history['final_bid'] ?>
                     </p>
-                    <!-- <a href="bidding.php?id=<?= $dt_item['id'] ?>" class="btn btn-primary w-100">Bid here</a> -->
                 </div>
             </div>
         </div>
         <?php
 }
 else{
-    echo "<script>alert('kntl');</script>";
+    echo "<script>alert('Error Cik!!!');</script>";
 }
 ?>
 
