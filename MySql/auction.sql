@@ -60,8 +60,8 @@ CREATE TABLE `client` (
 
 INSERT INTO `client` (`id`, `username`, `password`, `role`) VALUES
 (2, 'ryl', '202cb962ac59075b964b07152d234b70', 'admin'),
-(6, 'bokep', '202cb962ac59075b964b07152d234b70', 'user'),
-(7, 'sex', '202cb962ac59075b964b07152d234b70', 'user');
+(6, 'bob', '202cb962ac59075b964b07152d234b70', 'user'),
+(7, 'seggo', '202cb962ac59075b964b07152d234b70', 'user');
 
 -- --------------------------------------------------------
 
