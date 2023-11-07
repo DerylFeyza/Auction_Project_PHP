@@ -1,7 +1,7 @@
 <?php
 
 session_start()
-    ?>
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,18 +14,15 @@ session_start()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/home.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <title>Auction</title>
 </head>
 
 <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark" id="nav">
         <div class="container">
-            <a class="navbar-brand fw-bold fs-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
-                aria-controls="offcanvasExample">Auction</a>
-            <button class=" navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand fw-bold fs-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Auction</a>
+            <button class=" navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -109,7 +106,7 @@ session_start()
         var nav = document.getElementById('nav');
         var isScrolled = false;
 
-        window.addEventListener('scroll', function () {
+        window.addEventListener('scroll', function() {
             if (window.pageYOffset > 0) {
                 if (!isScrolled) {
                     nav.style.backgroundColor = 'black';
@@ -129,11 +126,10 @@ session_start()
             <?php
             if (isset($_SESSION['status_login'])) {
                 // This HTML block will be generated if the condition is true
-                echo '<h1>Welcome <span style="text-transform:uppercase; color: brown">' . $_SESSION['username'] . '</span> Go Buy Some Slave.</h1>';
+                echo '<h1>Welcome <span style="text-transform:uppercase; color: brown">' . $_SESSION['username'] . '</span> Go Bid.</h1>';
             } else if (!isset($_SESSION['status_login'])) {
                 echo '<h1>Welcome to the auction, please log in first</h1>';
                 echo '<a href=login.php class="btn btn-primary w-25 mt-3">Login</a>';
-
             }
             ?>
         </div>
@@ -149,9 +145,7 @@ session_start()
 
             <div class="col-md-5 my-auto">
                 <h1 class="fw-semibold">About</h1>
-                <p class="fw-medium">This content contains auctions, created using PHP to fulfill the task, only admin
-                    can access the items being auctioned, members can only bid. Make sure to log in first before
-                    bidding.</p>
+                <p class="fw-medium">auction web</p>
             </div>
         </div>
     </section>
@@ -164,7 +158,7 @@ session_start()
                 include "koneksi.php";
                 $qry_item = mysqli_query($conn, "SELECT * FROM item WHERE STATUS = 'Auctioned'");
                 while ($dt_item = mysqli_fetch_array($qry_item)) {
-                    ?>
+                ?>
                     <div class="col-md-3">
                         <div class="card border-0">
                             <img src="display_image.php?image_id=<?php echo $dt_item['id']; ?>" class="rounded w-100" />
@@ -182,7 +176,7 @@ session_start()
                             </div>
                         </div>
                     </div>
-                    <?php
+                <?php
                 }
                 ?>
             </div>
