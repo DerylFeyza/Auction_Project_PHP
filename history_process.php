@@ -5,7 +5,6 @@ if ($_GET) {
     $history_query = mysqli_query($conn, "SELECT * FROM bids WHERE bid = (SELECT MAX(bid) FROM bids WHERE id_item = " . $id . ") AND id_item = " . $id);
 
     if (mysqli_num_rows($history_query) == 0) {
-        // No bids detected, display an alert with options
         echo "<script>
         var confirmCancel = confirm('No bids detected. Do you want to cancel the auction instead?'); 
         if (confirmCancel) {

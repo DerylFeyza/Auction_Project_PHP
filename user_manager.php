@@ -2,10 +2,9 @@
 include "header.php";
 include "koneksi.php";
 if (!isset($_SESSION['id'])) {
-    echo "<script>alert('belum login kontol');location.href='home.php';</script>";
-}
-else if($_SESSION['role'] !== 'admin'){
-    echo "<script>alert('admin mana kontol');location.href='home.php';</script>";
+    echo "<script>alert('belum login ncrit');location.href='home.php';</script>";
+} else if ($_SESSION['role'] !== 'admin') {
+    echo "<script>alert('admin mana njing');location.href='home.php';</script>";
 }
 ?>
 
@@ -28,7 +27,7 @@ else if($_SESSION['role'] !== 'admin'){
             $no = 0;
             while ($dt_users = mysqli_fetch_array($qry_user)) {
                 $no++;
-                ?>
+            ?>
                 <tr class="text-center">
                     <td>
                         <?= $dt_users['id'] ?>
@@ -41,8 +40,7 @@ else if($_SESSION['role'] !== 'admin'){
                     </td>
                     <td>
                         <div class="btn-group">
-                            <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown"
-                                aria-expanded="false">
+                            <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                 Actions
                             </button>
                             <ul class="dropdown-menu">
@@ -60,7 +58,7 @@ else if($_SESSION['role'] !== 'admin'){
                         </div>
                     </td>
                 </tr>
-                <?php
+            <?php
             }
             ?>
         </tbody>

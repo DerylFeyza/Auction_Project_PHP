@@ -92,6 +92,9 @@ session_start()
         <a class="btn btn-primary w-100" id="offcanvasitem" href="tambah_item.php">Add Item</a>
         </li>
         <li class="mb-3">
+        <a class="btn btn-primary w-100" id="offcanvasitem" href="bid_history.php">Bid History</a>
+        </li>
+        <li class="mb-3">
         <a class="btn btn-primary w-100" id="offcanvasitem" href="publisher_item.php">Your Items</a>
         </li>
       </ul>
