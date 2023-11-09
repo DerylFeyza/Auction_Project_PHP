@@ -129,7 +129,7 @@ session_start()
             <?php
             if (isset($_SESSION['status_login'])) {
                 // This HTML block will be generated if the condition is true
-                echo '<h1>Welcome <span style="text-transform:uppercase; color: brown">' . $_SESSION['username'] . '</span> Go Bid.</h1>';
+                echo '<h1>Welcome <span style="text-transform:uppercase; color: brown">' . $_SESSION['username'] . '</span> Take a Look at Some of Our Items.</h1>';
             } else if (!isset($_SESSION['status_login'])) {
                 echo '<h1>Welcome to the auction, please log in first</h1>';
                 echo '<a href=login.php class="btn btn-primary w-25 mt-3">Login</a>';
